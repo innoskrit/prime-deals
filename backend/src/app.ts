@@ -1,8 +1,11 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import productRouter from './routes/productRoutes';
+import { connectDatabase } from './config/dbConnection';
 
 dotenv.config();
+
+connectDatabase();
 
 const app = express();
 
