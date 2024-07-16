@@ -4,11 +4,11 @@ export const connectDatabase = (): void => {
     let DB_URI = "";
 
     if(process.env.NODE_ENV === "DEVELOPMENT") {
-        DB_URI = process.env.DB_DEV_URI as string;
+        DB_URI = process.env.DB_DEVELOPMENT_URI as string;
     }
 
     if(process.env.NODE_ENV === "PRODUCTION") {
-        DB_URI = process.env.DB_PROD_URI as string;
+        DB_URI = process.env.DB_PRODUCTION_URI as string;
     }
 
     mongoose.connect(DB_URI)
